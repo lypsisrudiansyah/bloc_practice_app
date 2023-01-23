@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_bloc_app/screen/bloc_counter_app/counter_app_home.dart';
 import 'package:practice_bloc_app/theme.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
                   ButtonRadius(
                     textButton: "Bloc Counter App",
                     onPressedCustom: () {
-                      // Navigator.push(context, route);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const CounterAppHomeScren()));
                     },
                   ),
                   ButtonRadius(
