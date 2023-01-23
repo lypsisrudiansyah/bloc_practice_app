@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_bloc_app/screen/bloc_counter_app/counter_app_home.dart';
-import 'package:practice_bloc_app/theme.dart';
+import 'package:practice_bloc_app/screen/simple_shop_app/shop_app_home.dart';
+import 'package:practice_bloc_app/shared/widget/button_void_func.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,16 +18,16 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: Column(
                 children: [
-                  ButtonRadius(
+                  ButtonVoidFunc(
                     textButton: "Bloc Counter App",
                     onPressedCustom: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => const CounterAppHomeScren()));
                     },
                   ),
-                  ButtonRadius(
+                  ButtonVoidFunc(
                     textButton: "Simple Shop App",
                     onPressedCustom: () {
-                      // Navigator.push(context, route);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopAppHomeScreen()));
                     },
                   ),
                 ],
@@ -34,30 +35,5 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ));
-  }
-}
-
-class ButtonRadius extends StatelessWidget {
-  const ButtonRadius({
-    Key? key,
-    required this.textButton,
-    required this.onPressedCustom,
-  }) : super(key: key);
-
-  final String textButton;
-  final VoidCallback onPressedCustom;
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: accentColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12), // <-- RadiusXS
-        ),
-      ),
-      onPressed: onPressedCustom,
-      child: Text(textButton),
-    );
   }
 }
