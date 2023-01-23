@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice_bloc_app/screen/bloc_counter_app/counter_app_home.dart';
+import 'package:practice_bloc_app/screen/bloc_listener_implementation/home_bloc_listener.dart';
 import 'package:practice_bloc_app/screen/simple_shop_app/shop_app_home.dart';
 import 'package:practice_bloc_app/shared/widget/button_void_func.dart';
 
@@ -28,6 +29,12 @@ class HomeScreen extends StatelessWidget {
                   textButton: "Simple Shop App",
                   onPressedCustom: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopAppHomeScreen()));
+                  },
+                ),
+                ButtonVoidFunc(
+                  textButton: "BLOC Listener",
+                  onPressedCustom: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeBlocListenerScreen()));
                   },
                 ),
               ],
