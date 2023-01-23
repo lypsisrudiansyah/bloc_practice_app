@@ -12,26 +12,25 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text("BLOC Practice APP"),
         ),
-        body: SingleChildScrollView(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: Column(
-                children: [
-                  ButtonVoidFunc(
-                    textButton: "Bloc Counter App",
-                    onPressedCustom: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const CounterAppHomeScren()));
-                    },
-                  ),
-                  ButtonVoidFunc(
-                    textButton: "Simple Shop App",
-                    onPressedCustom: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopAppHomeScreen()));
-                    },
-                  ),
-                ],
-              ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ButtonVoidFunc(
+                  textButton: "Bloc Counter App",
+                  onPressedCustom: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const CounterAppHomeScren()));
+                  },
+                ),
+                ButtonVoidFunc(
+                  textButton: "Simple Shop App",
+                  onPressedCustom: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ShopAppHomeScreen()));
+                  },
+                ),
+              ],
             ),
           ),
         ));

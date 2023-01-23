@@ -28,7 +28,7 @@ class CounterBlocClassScreen extends StatelessWidget {
                     ),
                     const SizedBox(
                       height: 15.0,
-                    ),
+                    ),  
                     Column(
                       children: [
                         ElevatedButton(

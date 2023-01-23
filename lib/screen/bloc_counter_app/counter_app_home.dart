@@ -19,7 +19,7 @@ class CounterAppHomeScren extends StatelessWidget {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: primaryColorCustom,
+                backgroundColor: accentColor,
               ),
               onPressed: () {
                 Navigator.push(
@@ -31,7 +31,7 @@ class CounterAppHomeScren extends StatelessWidget {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: primaryColorCustom,
+                backgroundColor: accentColor,
               ),
               onPressed: () {
                 Navigator.push(
@@ -43,7 +43,7 @@ class CounterAppHomeScren extends StatelessWidget {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: primaryColorCustom,
+                backgroundColor: accentColor,
               ),
               onPressed: () {
                 Navigator.push(

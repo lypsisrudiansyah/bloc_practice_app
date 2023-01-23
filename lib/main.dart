@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practice_bloc_app/bloc/data_dummy/data_dummy_bloc.dart';
 import 'package:practice_bloc_app/bloc/shop_app/product/product_bloc.dart';
+import 'package:practice_bloc_app/cubit/shop_app/data_dummy/data_dummy_cubit.dart';
 import 'package:practice_bloc_app/cubit/shop_app/product/product_cubit.dart';
 import 'package:practice_bloc_app/screen/home_screen.dart';
 import 'package:practice_bloc_app/theme.dart';
@@ -19,12 +21,14 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => ProductBloc()),
         BlocProvider(create: (context) => ProductCubit()),
+        BlocProvider(create: (context) => DataDummyBloc()),
+        BlocProvider(create: (context) => DataDummyCubit()),
       ],
       child: MaterialApp(
         title: 'Simple Shop App',
         theme: ThemeData(
           primaryColor: primaryColorCustom,
-          colorScheme: ColorScheme.fromSwatch().copyWith(primary: primaryColorCustom),
+          colorScheme: ColorScheme.fromSwatch().copyWith(primary: accentColor),
         ),
         home: const HomeScreen(),
       ),

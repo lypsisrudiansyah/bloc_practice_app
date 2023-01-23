@@ -10,7 +10,7 @@ class ShopAppHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Screen"),
+        title: const Text("Shop App Home"),
       ),
       body: Center(
         child: Column(
