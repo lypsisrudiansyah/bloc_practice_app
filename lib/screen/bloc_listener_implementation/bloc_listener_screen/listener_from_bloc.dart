@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice_bloc_app/bloc/data_dummy/data_dummy_bloc.dart';
-import 'package:practice_bloc_app/screen/bloc_listener_implementation/bloc_listener_screen/listener_dummy_page.dart';
+import 'package:practice_bloc_app/screen/dummy_page.dart';
 import 'package:practice_bloc_app/theme.dart';
 
 class ListenerFromBlocScreen extends StatelessWidget {

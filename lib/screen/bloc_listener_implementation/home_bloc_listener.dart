@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice_bloc_app/screen/bloc_listener_implementation/bloc_listener_screen/listener_from_bloc.dart';
-import 'package:practice_bloc_app/screen/simple_shop_app/shop_app_screen/product_screen_with_cubit.dart';
+import 'package:practice_bloc_app/screen/bloc_listener_implementation/bloc_listener_screen/listener_from_cubit.dart';
 import 'package:practice_bloc_app/shared/widget/button_void_func.dart';
 
 class HomeBlocListenerScreen extends StatelessWidget {
@@ -28,7 +28,7 @@ class HomeBlocListenerScreen extends StatelessWidget {
               textButton: "BLOC Listener (CUBIT)",
               onPressedCustom: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const ProductScreenWithCubit()),
+                MaterialPageRoute(builder: (context) => const ListenerFromCubitScreen()),
               ),
             ),
           ],
