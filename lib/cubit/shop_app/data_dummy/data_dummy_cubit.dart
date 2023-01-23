@@ -9,6 +9,6 @@ class DataDummyCubit extends Cubit<DataDummyState2> {
   void getDataDummy() async {
     emit(DataDummyLoading2());
     await Future.delayed(const Duration(milliseconds: 2500));
-    emit(DataDummySuccess2("Succeed get the data."));
+    emit(DataDummySuccess2("Succeed get the data(cubit)."));
   }
 }
