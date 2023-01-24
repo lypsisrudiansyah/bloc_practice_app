@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_bloc_app/screen/authentication_app_with_blocConsumer/login_screen_bc.dart';
 import 'package:practice_bloc_app/screen/bloc_consumer_implementation/bloc_consumer_screen.dart';
 import 'package:practice_bloc_app/screen/bloc_counter_app/counter_app_home.dart';
 import 'package:practice_bloc_app/screen/bloc_listener_implementation/home_bloc_listener.dart';
@@ -42,6 +43,12 @@ class HomeScreen extends StatelessWidget {
                   textButton: "BLOC Consumer",
                   onPressedCustom: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const BlocConsumerScreen()));
+                  },
+                ),
+                ButtonVoidFunc(
+                  textButton: "Auth App(BLOC Consumer)",
+                  onPressedCustom: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LogiScreenBc()));
                   },
                 ),
               ],
