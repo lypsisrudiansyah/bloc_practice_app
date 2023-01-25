@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practice_bloc_app/bloc/auth_app_bc/auth_bc_bloc.dart';
 import 'package:practice_bloc_app/screen/authentication_app_with_blocConsumer/home_screen_bc.dart';
 
-class LogiScreenBc extends StatefulWidget {
-  const LogiScreenBc({super.key});
+class LoginScreenBc extends StatefulWidget {
+  const LoginScreenBc({super.key});
 
   @override
-  State<LogiScreenBc> createState() => _LogiScreenBcState();
+  State<LoginScreenBc> createState() => _LoginScreenBcState();
 }
 
-class _LogiScreenBcState extends State<LogiScreenBc> {
+class _LoginScreenBcState extends State<LoginScreenBc> {
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -59,16 +61,28 @@ class _LogiScreenBcState extends State<LogiScreenBc> {
               const SizedBox(
                 height: 20.0,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const HomeScreenBc(),
-                    ),
+              BlocConsumer<AuthBcBloc, AuthBcState>(
+                listener: (context, state) {
+                  if (state is AuthBcSucceed) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreenBc(username: state.username,),
+                      ),
+                    );
+                  }
+                },
+                builder: (context, state) {
+                  if (state is AuthBcLoading) {
+                    return const CircularProgressIndicator();
+                  }
+                  return ElevatedButton(
+                    onPressed: () {
+                      context.read<AuthBcBloc>().add(OnAuthCalledEvent(username: userNameController.text, password: passwordController.text));
+                    },
+                    child: const Text('Sign In'),
                   );
                 },
-                child: const Text('Sign In'),
               ),
             ],
           ),
