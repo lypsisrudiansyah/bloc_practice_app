@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class HomeScreenBc extends StatelessWidget {
-  const HomeScreenBc({super.key});
+  final String username;
+  const HomeScreenBc({super.key, required this.username});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Username"),
+        title: Text(username),
       ),
     );
   }

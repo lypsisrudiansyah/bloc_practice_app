@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                 ButtonVoidFunc(
                   textButton: "Auth App(BLOC Consumer)",
                   onPressedCustom: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LogiScreenBc()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreenBc()));
                   },
                 ),
               ],

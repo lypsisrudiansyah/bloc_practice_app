@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practice_bloc_app/bloc/auth_app_bc/auth_bc_bloc.dart';
 import 'package:practice_bloc_app/bloc/data_dummy/data_dummy_bloc.dart';
 import 'package:practice_bloc_app/bloc/shop_app/product/product_bloc.dart';
 import 'package:practice_bloc_app/cubit/shop_app/product/product_cubit.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => ProductBloc()),
         BlocProvider(create: (context) => ProductCubit()),
         BlocProvider(create: (context) => DataDummyBloc()),
+        BlocProvider(create: (context) => AuthBcBloc()),
       ],
       child: MaterialApp(
         title: 'Simple Shop App',
