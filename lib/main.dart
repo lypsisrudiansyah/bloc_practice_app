@@ -5,15 +5,11 @@ import 'package:practice_bloc_app/bloc/shop_app/product/product_bloc.dart';
 import 'package:practice_bloc_app/cubit/shop_app/product/product_cubit.dart';
 import 'package:practice_bloc_app/screen/home_screen.dart';
 import 'package:practice_bloc_app/theme.dart';
-
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -26,7 +22,7 @@ class MyApp extends StatelessWidget {
         title: 'Simple Shop App',
         theme: ThemeData(
           primaryColor: primaryColorCustom,
-          colorScheme: ColorScheme.fromSwatch().copyWith(primary: accentColor),
+          colorScheme: ColorScheme.fromSwatch().copyWith(primary: accentColor /* <- primarySwatch */),
         ),
         home: const HomeScreen(),
       ),

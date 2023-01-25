@@ -64,7 +64,7 @@ class _LogiScreenBcState extends State<LogiScreenBc> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HomaScreenBc(),
+                      builder: (context) => const HomeScreenBc(),
                     ),
                   );
                 },
