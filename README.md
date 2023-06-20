@@ -1,10 +1,10 @@
 # practice_bloc_app
 
-A new Flutter project.
+## Preview Images
+![blocpracticeApp](https://github.com/lypsisrudiansyah/bloc_practice_app/assets/52348378/ea8fb436-cbfa-432e-8f32-e3cdad9d29ce)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Getting Started for Flutter
 
 A few resources to get you started if this is your first Flutter project:
 
