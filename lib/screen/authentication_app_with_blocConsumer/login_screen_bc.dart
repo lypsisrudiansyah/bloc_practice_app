@@ -31,7 +31,7 @@ class _LoginScreenBcState extends State<LoginScreenBc> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                'Sign Up',
+                'Get in into the App',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.w600,

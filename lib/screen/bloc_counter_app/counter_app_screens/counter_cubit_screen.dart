@@ -47,7 +47,7 @@ class CounterCubitScreen extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            context.read<CounterCubit>().increment();
+                            context.read<CounterCubit>().decrement();
                           },
                           child: const Text(
                             'Decrement',

@@ -8,7 +8,7 @@ class AuthBcBloc extends Bloc<AuthBcEvent, AuthBcState> {
   AuthBcBloc() : super(AuthBcInitial()) {
     on<OnAuthCalledEvent>((event, emit) async {
       emit(AuthBcLoading());
-      await Future.delayed(const Duration(microseconds: 1500));
+      await Future.delayed(const Duration(seconds: 2));
       emit(AuthBcSucceed(username: event.username));
     });
   }
