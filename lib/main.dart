@@ -20,13 +20,14 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => DataDummyBloc()),
         BlocProvider(create: (context) => AuthBcBloc()),
       ],
-      child: MaterialApp(
+      child:  MaterialApp(
         title: 'Simple Shop App',
+        // theme: ThemeData.dark(),
         theme: ThemeData(
           primaryColor: primaryColorCustom,
           colorScheme: ColorScheme.fromSwatch().copyWith(primary: accentColor /* <- primarySwatch */),
         ),
-        home: const HomeScreen(),
+        home: const HomeScreen()
       ),
     );
   }

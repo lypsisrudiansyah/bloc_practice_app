@@ -3,33 +3,33 @@ import 'package:practice_bloc_app/model/product_model.dart';
 List<Product> productsData = [
  Product(
    id: 'product 1',
-   title: 'Red Shirt',
-   description: 'A red shirt - it is pretty red!',
+   title: 'MTB Bike',
+   description: 'Adventure part of our life !',
    price: 29.99,
    imageUrl:
-       'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+       'https://www.ngopibareng.id/images/imagecache/202008231239272021-mondraker-podium-rr-lightest-hardtail-mountain-bike-2.jpeg',
  ),
  Product(
    id: 'product 2',
-   title: 'Trousers',
-   description: 'A nice pair of trousers.',
+   title: 'Snapback',
+   description: 'Snapback increase your confident.',
    price: 59.99,
    imageUrl:
-       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+       'https://snapback.co.id/image/cache/catalog/Snapback%20Caps/urraa_1-600x666.jpg',
  ),
  Product(
    id: 'product 3',
-   title: 'Yellow Scarf',
-   description: 'Warm and cozy - exactly what you need for the winter.',
+   title: 'Jacket',
+   description: 'Make it stylish.',
    price: 19.99,
-   imageUrl: 'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
+   imageUrl: 'https://www.mrporter.com/variants/images/1647597290512516/ou/w2000_q60.jpg',
  ),
  Product(
    id: 'product 4',
-   title: 'A Pan',
+   title: 'Microwave',
    description: 'Prepare any meal you want.',
    price: 49.99,
    imageUrl:
-       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
+       'https://id.sharp/sites/default/files/uploads/2021-08/shutterstock_74089945.jpg',
  ),
 ];
